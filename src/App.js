@@ -154,7 +154,7 @@ function App() {
                   {person.lessee}
                 </span>
               </p>
-              <p className="mt-1 flex text-xs font-semibold laranja leading-5 text-gray-500">
+              {/* <p className="mt-1 flex text-xs font-semibold laranja leading-5 text-gray-500">
                 Start Lease . 
                 <span className="font-normal">
                   {person.startLease}
@@ -165,7 +165,7 @@ function App() {
                 <span className="font-normal">
                   {person.endLease}
                 </span>
-              </p>
+              </p> */}
             </div>
           </div>
           <div className="flex items-center gap-x-4">
@@ -186,16 +186,16 @@ function App() {
               )}
               <p className="mt-1 flex text-xs laranja leading-5 font-semibold text-gray-500">
                 Created At .  
-                <span className="font-normal">
+                <span className="font-normal text-gray-500">
                   {person.createAt}
                 </span>
               </p>
-              <p className="mt-1 flex text-xs font-semibold laranja leading-5 text-gray-500">
+              {/* <p className="mt-1 flex text-xs font-semibold laranja leading-5 ">
                 Update At . 
-                <span className="font-normal">
+                <span className="font-normal text-gray-500">
                   {person.updateAt}
                 </span>
-              </p>
+              </p> */}
             </div>
             
           </div>
