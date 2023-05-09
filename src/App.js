@@ -1,7 +1,7 @@
 import './App.css';
 
 
-const people = [
+/* const people = [
   { 
     id: '09039022-34355-de99de0-009ded-9de090de9', 
     envelope: '090e9d0e9d09e0dk0d0ekd0k044', 
@@ -47,68 +47,43 @@ const people = [
     vehicleId: '909d0e909d0edm-d0e90dem-dieijok-ed'
   },
 ]
-
+ */
 
 // Array Second model
 const peoples = [
   {
-    name: 'Leslie Alexander',
-    email: 'leslie.alexander@example.com',
-    role: 'Co-Founder / CEO',
+    id: '393582b8-df74-4c6c-b537-23fb43a5dad0',
+    email: 'model@motorenvy.com',
+    role: '45627318-426c-42ad-ba5d-162664d27502',
     imageUrl:
       ' ',
     href: '#',
-    lastSeen: '3h ago',
+    lastSeen: 'Vehicle Id .4a780876-1814-4496-ac67-d874da57e928',
     lastSeenDateTime: '2023-01-23T13:23Z',
+    createAt: '2023-05-05T18:04:30.431Z',
   },
   {
-    name: 'Michael Foster',
-    email: 'michael.foster@example.com',
-    role: 'Co-Founder / CTO',
+    id: '393582b8-df74-4c6c-b537-23fb43a5dad0',
+    email: 'model@motorenvy.com',
+    role: '45627318-426c-42ad-ba5d-162664d27502',
     imageUrl:
       'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     href: '#',
-    lastSeen: '3h ago',
+    lastSeen: 'Vehicle Id .4a780876-1814-4496-ac67-d874da57e928',
     lastSeenDateTime: '2023-01-23T13:23Z',
+    createAt: '2023-05-05T18:04:30.431Z',
   },
   {
-    name: 'Dries Vincent',
-    email: 'dries.vincent@example.com',
-    role: 'Business Relations',
+    id: '393582b8-df74-4c6c-b537-23fb43a5dad0',
+    email: 'model@motorenvy.com',
+    role: '45627318-426c-42ad-ba5d-162664d27502',
     imageUrl:
       'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     href: '#',
     lastSeen: null,
+    createAt: '2023-05-05T18:04:30.431Z',
   },
-  {
-    name: 'Lindsay Walton',
-    email: 'lindsay.walton@example.com',
-    role: 'Front-end Developer',
-    imageUrl:
-      'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    href: '#',
-    lastSeen: '3h ago',
-    lastSeenDateTime: '2023-01-23T13:23Z',
-  },
-  {
-    name: 'Courtney Henry',
-    email: 'courtney.henry@example.com',
-    role: 'Designer',
-    imageUrl:
-      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    href: '#',
-    lastSeen: '3h ago',
-    lastSeenDateTime: '2023-01-23T13:23Z',
-  },
-  {
-    name: 'Tom Cook',
-    email: 'tom.cook@example.com',
-    role: 'Director of Product',
-    imageUrl:
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    href: '#',
-    lastSeen: null,
-  },
+  
 ]
 
 function App() {
@@ -161,41 +136,55 @@ function App() {
 
 
     // Second Model
-    <div className="flex flex-row justify-center px-5 py-5 m-5 ">
+    <div className="flex flex-col justify-center px-5 py-5 m-5 ">
       <ul className="divide-y divide-gray-100">
       {peoples.map((person) => (
         <li key={person.email} className="relative flex justify-between gap-x-6 py-5">
           <div className="flex gap-x-4">
-            <img className="h-12 w-12 flex-none rounded-full bg-gray-50" src={person.imageUrl} alt="" />
+            <div className="bg-gray-500 w-12 h-12 mt-1 rounded-full"></div>
             <div className="min-w-0 flex-auto">
-              <p className="text-sm font-semibold leading-6 text-gray-900">
-                <a href={person.href}>
-                  <span className="absolute inset-x-0 -top-px bottom-0" />
-                  {person.name}
-                </a>
+              <p className="text-sm leading-6 text-gray-900">
+                Id .
+                <span className="font-normal">
+                   {person.id}
+                </span>
               </p>
-              <p className="mt-1 flex text-xs leading-5 text-gray-500">
-                <a href={`mailto:${person.email}`} className="relative truncate hover:underline">
+              <p className="mt-1 flex text-xs leading-5 font-semibold text-gray-500">
+                Lessee . 
+                <span className="font-normal">
                   {person.email}
-                </a>
+                </span>
+              </p>
+              <p className="mt-1 flex text-xs font-semibold laranja leading-5 text-gray-500">
+                Update At . 
+                <span className="font-normal">
+                  2023-05-05T18:04:30.431Z
+                </span>
               </p>
             </div>
           </div>
           <div className="flex items-center gap-x-4">
             <div className="hidden sm:flex sm:flex-col sm:items-end">
-              <p className="text-sm leading-6 text-gray-900">{person.role}</p>
+              <p className="text-sm leading-6 text-gray-900">Envelope ID .{person.role}</p>
               {person.lastSeen ? (
                 <p className="mt-1 text-xs leading-5 text-gray-500">
-                  Last seen <time dateTime={person.lastSeenDateTime}>{person.lastSeen}</time>
+                  <time dateTime={person.lastSeenDateTime}>{person.lastSeen}</time>
                 </p>
               ) : (
                 <div className="mt-1 flex items-center gap-x-1.5">
                   <div className="flex-none rounded-full bg-emerald-500/20 p-1">
                     <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
                   </div>
-                  <p className="text-xs leading-5 text-gray-500">Online</p>
+                  <p className="text-xs leading-5 text-gray-500">Sent / </p>
+                  <p>Modelo de Status</p>
                 </div>
               )}
+              <p className="mt-1 flex text-xs laranja leading-5 font-semibold text-gray-500">
+                Created At .  
+                <span className="font-normal">
+                  {person.createAt}
+                </span>
+              </p>
             </div>
             
           </div>
@@ -204,7 +193,7 @@ function App() {
     </ul>
     </div>
     
-  
+    
   );
 }
 

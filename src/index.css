@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 th {
   color: #f66;
   font-size: 13px;
@@ -12,10 +11,13 @@ td {
   font-size: 12px;
 }
 
+.laranja {
+  color: #f66; 
+}
+
 .verde {
   color: rgb(32 245 110 / 76%);
 }
-
 
 body {
   margin: 0;
