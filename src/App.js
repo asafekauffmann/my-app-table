@@ -53,35 +53,35 @@ import './App.css';
 const peoples = [
   {
     id: '393582b8-df74-4c6c-b537-23fb43a5dad0',
-    email: 'model@motorenvy.com',
+    lessee: 'model@motorenvy.com',
     role: '45627318-426c-42ad-ba5d-162664d27502',
-    imageUrl:
-      ' ',
-    href: '#',
     lastSeen: 'Vehicle Id .4a780876-1814-4496-ac67-d874da57e928',
     lastSeenDateTime: '2023-01-23T13:23Z',
     createAt: '2023-05-05T18:04:30.431Z',
+    updateAt: '2023-05-05T18:04:30.431Z',
+    startLease: '05/05/2023',
+    endLease: '05/05/2024',
   },
   {
     id: '393582b8-df74-4c6c-b537-23fb43a5dad0',
-    email: 'model@motorenvy.com',
+    lessee: 'model@motorenvy.com',
     role: '45627318-426c-42ad-ba5d-162664d27502',
-    imageUrl:
-      'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    href: '#',
     lastSeen: 'Vehicle Id .4a780876-1814-4496-ac67-d874da57e928',
     lastSeenDateTime: '2023-01-23T13:23Z',
     createAt: '2023-05-05T18:04:30.431Z',
+    updateAt: '2023-05-05T18:04:30.431Z',
+    startLease: '05/05/2023',
+    endLease: '05/05/2024',
   },
   {
     id: '393582b8-df74-4c6c-b537-23fb43a5dad0',
-    email: 'model@motorenvy.com',
+    lessee: 'model@motorenvy.com',
     role: '45627318-426c-42ad-ba5d-162664d27502',
-    imageUrl:
-      'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    href: '#',
     lastSeen: null,
     createAt: '2023-05-05T18:04:30.431Z',
+    updateAt: '2023-05-05T18:04:30.431Z',
+    startLease: '05/05/2023',
+    endLease: '05/05/2024',
   },
   
 ]
@@ -134,12 +134,11 @@ function App() {
       </div>
     </div> */
 
-
     // Second Model
     <div className="flex flex-col justify-center px-5 py-5 m-5 ">
       <ul className="divide-y divide-gray-100">
       {peoples.map((person) => (
-        <li key={person.email} className="relative flex justify-between gap-x-6 py-5">
+        <li key={person.lesse} className="relative flex justify-between gap-x-6 py-5">
           <div className="flex gap-x-4">
             <div className="bg-gray-500 w-12 h-12 mt-1 rounded-full"></div>
             <div className="min-w-0 flex-auto">
@@ -152,13 +151,19 @@ function App() {
               <p className="mt-1 flex text-xs leading-5 font-semibold text-gray-500">
                 Lessee . 
                 <span className="font-normal">
-                  {person.email}
+                  {person.lessee}
                 </span>
               </p>
               <p className="mt-1 flex text-xs font-semibold laranja leading-5 text-gray-500">
-                Update At . 
+                Start Lease . 
                 <span className="font-normal">
-                  2023-05-05T18:04:30.431Z
+                  {person.startLease}
+                </span>
+              </p>
+              <p className="mt-1 flex text-xs font-semibold laranja leading-5 text-gray-500">
+                End Lease . 
+                <span className="font-normal">
+                  {person.endLease}
                 </span>
               </p>
             </div>
@@ -183,6 +188,12 @@ function App() {
                 Created At .  
                 <span className="font-normal">
                   {person.createAt}
+                </span>
+              </p>
+              <p className="mt-1 flex text-xs font-semibold laranja leading-5 text-gray-500">
+                Update At . 
+                <span className="font-normal">
+                  {person.updateAt}
                 </span>
               </p>
             </div>
