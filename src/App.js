@@ -1,6 +1,5 @@
 import './App.css';
 
-
 /* const people = [
   { 
     id: '09039022-34355-de99de0-009ded-9de090de9', 
@@ -46,12 +45,13 @@ import './App.css';
     paymentDueDay: '0',
     vehicleId: '909d0e909d0edm-d0e90dem-dieijok-ed'
   },
-]
- */
+] */
+
 
 // Array Second model
-const peoples = [
+ const peoples = [
   {
+    vin: '08821-992AH-299',
     id: '393582b8-df74-4c6c-b537-23fb43a5dad0',
     lessee: 'model@motorenvy.com',
     role: '45627318-426c-42ad-ba5d-162664d27502',
@@ -63,6 +63,7 @@ const peoples = [
     endLease: '05/05/2024',
   },
   {
+    vin: '08821-992AH-299',
     id: '393582b8-df74-4c6c-b537-23fb43a5dad0',
     lessee: 'model@motorenvy.com',
     role: '45627318-426c-42ad-ba5d-162664d27502',
@@ -74,6 +75,7 @@ const peoples = [
     endLease: '05/05/2024',
   },
   {
+    vin: '08821-992AH-299',
     id: '393582b8-df74-4c6c-b537-23fb43a5dad0',
     lessee: 'model@motorenvy.com',
     role: '45627318-426c-42ad-ba5d-162664d27502',
@@ -84,6 +86,7 @@ const peoples = [
     endLease: '05/05/2024',
   },
   {
+    vin: '08821-992AH-299',
     id: '393582b8-df74-4c6c-b537-23fb43a5dad0',
     lessee: 'model@motorenvy.com',
     role: '45627318-426c-42ad-ba5d-162664d27502',
@@ -94,10 +97,85 @@ const peoples = [
     endLease: '05/05/2024',
   },
   
-]
+] 
 
 function App() {
   return (
+    <div className="flex flex-col justify-center px-5 py-5 m-5 ">
+      <ul className="divide-y divide-gray-100">
+        {peoples.map((person) => (
+          <li key={person.lesse} className="relative flex justify-between gap-x-6 py-5">
+            <div className="flex gap-x-4">
+              <div className="bg-gray-500 w-12 h-12  rounded-full"></div>
+              <div className="min-w-0 flex-auto">
+                <p className="text-sm leading-6 text-gray-900">
+                  Vin .
+                  <span className="font-normal">
+                    {person.vin}
+                  </span>
+                </p>
+                <p className="mt-1 flex text-xs leading-5 font-semibold text-gray-500">
+                  Lessee . 
+                  <span className="font-normal">
+                    {person.lessee}
+                  </span>
+                </p>
+                <p className="mt-1 flex text-xs leading-5 text-gray-500">
+                  Co-Lessee . 
+                  {/* <span className="font-normal">
+                    {person.startLease}
+                  </span> */}
+                </p>
+                {/* <p className="mt-1 flex text-xs font-semibold laranja leading-5 text-gray-500">
+                  End Lease . 
+                  <span className="font-normal">
+                    {person.endLease}
+                  </span>
+                </p>   */}
+              </div>
+            </div>
+            <div className="flex items-center gap-x-4">
+              <div className="hidden sm:flex sm:flex-col sm:items-end">
+                <p className="text-sm leading-6 text-gray-900">Envelope ID .{person.role}</p>
+                {person.lastSeen ? (
+                  <p className="mt-1 text-xs leading-5 text-gray-500">
+                    <time dateTime={person.lastSeenDateTime}>{person.lastSeen}</time>
+                  </p>
+                ) : (
+                  <div className="mt-1 flex items-center gap-x-1.5">
+                    <div className="flex-none rounded-full bg-emerald-500/20 p-1">
+                      <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                    </div>
+                    <p className="text-xs leading-5 text-gray-500">Sent / </p>
+                    <p>Modelo de Status</p>
+                  </div>
+                )}
+                <p className="mt-1 flex text-xs font-semibold laranja leading-5 text-gray-500">
+                  Start/End Lease . 
+                  <span className="font-normal text-gray-500">
+                  {person.startLease} ~ {person.endLease} 
+                  </span>
+                </p>
+                
+                {/* <p className="mt-1 flex text-xs laranja leading-5 font-semibold text-gray-500">
+                  Created At .  
+                  <span className="font-normal text-gray-500">
+                    {person.createAt}
+                  </span>
+                </p>
+                <p className="mt-1 flex text-xs font-semibold laranja leading-5 ">
+                  Update At . 
+                  <span className="font-normal text-gray-500">
+                    {person.updateAt}
+                  </span>
+                </p>  */}
+              </div>
+              
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
     // First model 
     /* <div className="px-4 sm:px-6 lg:px-9">
       <div className="mt-5 flow-root">
@@ -142,86 +220,7 @@ function App() {
           </div>
         </div>
       </div>
-    </div> */
-
-    // Second Model
-    <div className="flex flex-col justify-center px-5 py-5 m-5 ">
-      <ul className="divide-y divide-gray-100">
-        {peoples.map((person) => (
-          <li key={person.lesse} className="relative flex justify-between gap-x-6 py-5">
-            <div className="flex gap-x-4">
-              <div className="bg-gray-500 w-12 h-12  rounded-full"></div>
-              <div className="min-w-0 flex-auto">
-                <p className="text-sm leading-6 text-gray-900">
-                  Id .
-                  <span className="font-normal">
-                    {person.id}
-                  </span>
-                </p>
-                <p className="mt-1 flex text-xs leading-5 font-semibold text-gray-500">
-                  Lessee . 
-                  <span className="font-normal">
-                    {person.lessee}
-                  </span>
-                </p>
-                {/* <p className="mt-1 flex text-xs font-semibold laranja leading-5 text-gray-500">
-                  Start Lease . 
-                  <span className="font-normal">
-                    {person.startLease}
-                  </span>
-                </p>
-                <p className="mt-1 flex text-xs font-semibold laranja leading-5 text-gray-500">
-                  End Lease . 
-                  <span className="font-normal">
-                    {person.endLease}
-                  </span>
-                </p> */}
-              </div>
-            </div>
-            <div className="flex items-center gap-x-4">
-              <div className="hidden sm:flex sm:flex-col sm:items-end">
-                <p className="text-sm leading-6 text-gray-900">Envelope ID .{person.role}</p>
-                {person.lastSeen ? (
-                  <p className="mt-1 text-xs leading-5 text-gray-500">
-                    <time dateTime={person.lastSeenDateTime}>{person.lastSeen}</time>
-                  </p>
-                ) : (
-                  <div className="mt-1 flex items-center gap-x-1.5">
-                    <div className="flex-none rounded-full bg-emerald-500/20 p-1">
-                      <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                    </div>
-                    <p className="text-xs leading-5 text-gray-500">Sent / </p>
-                    <p>Modelo de Status</p>
-                  </div>
-                )}
-                <p className="mt-1 flex text-xs font-semibold laranja leading-5 text-gray-500">
-                  End Lease . 
-                  <span className="font-normal text-gray-500">
-                    {person.endLease}
-                  </span>
-                </p>
-                {/* 
-                <p className="mt-1 flex text-xs laranja leading-5 font-semibold text-gray-500">
-                  Created At .  
-                  <span className="font-normal text-gray-500">
-                    {person.createAt}
-                  </span>
-                </p>
-                <p className="mt-1 flex text-xs font-semibold laranja leading-5 ">
-                  Update At . 
-                  <span className="font-normal text-gray-500">
-                    {person.updateAt}
-                  </span>
-                </p> */}
-              </div>
-              
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
-    
-    
+    </div>  */
   );
 }
 
